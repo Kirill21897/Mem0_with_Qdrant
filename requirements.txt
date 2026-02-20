@@ -2,6 +2,7 @@
 mem0ai
 python-dotenv
 openai
+streamlit
 
 # Qdrant dependencies
 qdrant-client
