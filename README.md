@@ -20,7 +20,7 @@
 
 1.  **Клонируйте репозиторий**:
     ```bash
-    git clone https://github.com/your-repo/mem0-qdrant-chat.git
+    git clone git@github.com:Kirill21897/Mem0_with_Qdrant.git
     cd mem0-qdrant-chat
     ```
 
