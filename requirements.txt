@@ -1,6 +1,7 @@
 # Required packages for mem0ai
 mem0ai
 python-dotenv
+openai
 
 # Qdrant dependencies
 qdrant-client
