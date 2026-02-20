@@ -2,40 +2,13 @@ import os
 import time
 from dotenv import load_dotenv
 from mem0 import Memory
+from config import MEM0_CONFIG
 
 # Загрузка переменных окружения
 load_dotenv(override=True)
 
-# Конфигурация Mem0 для Self-Hosted + OpenRouter
-config = {
-    "history_db_path": "history.db",
-    "vector_store": {
-        "provider": "qdrant",
-        "config": {
-            "url": "http://localhost:6333",
-            "api_key": os.getenv("QDRANT_API_KEY"),
-            "collection_name": "mem0_memories",
-            "embedding_model_dims": 384
-        }
-    },
-    "llm": {
-        "provider": "openai",
-        "config": {
-            "model": "openai/gpt-4o",
-            "api_key": os.getenv("OPENAI_API_KEY"),
-            "openai_base_url": "https://openrouter.ai/api/v1"
-        }
-    },
-    "embedder": {
-        "provider": "huggingface",  # Локальная модель
-        "config": {
-            "model": "sentence-transformers/all-MiniLM-L6-v2"
-        }
-    }
-}
-
 # Инициализация клиента
-client = Memory.from_config(config)
+client = Memory.from_config(MEM0_CONFIG)
 
 # --- Логика из ноутбука .ipynb ---
 
